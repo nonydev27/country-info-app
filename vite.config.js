@@ -8,5 +8,7 @@ export default defineConfig({
   server: {
     port: 5173, // http://localhost:5173 once you run `npm run dev`
     open: true, // automatically opens the browser
+      base: '/country-info-app/',
+
   },
 });
