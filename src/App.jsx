@@ -12,15 +12,14 @@ function GlobeIcon() {
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      {/* Outer glow circle */}
       <defs>
         <radialGradient id="globeGlow" cx="50%" cy="40%" r="60%">
-          <stop offset="0%" stopColor="#58a6ff" stopOpacity="0.3" />
-          <stop offset="100%" stopColor="#58a6ff" stopOpacity="0" />
+          <stop offset="0%" stopColor="#4f6ef7" stopOpacity="0.2" />
+          <stop offset="100%" stopColor="#4f6ef7" stopOpacity="0" />
         </radialGradient>
-        <radialGradient id="globeFill" cx="40%" cy="35%" r="65%">
-          <stop offset="0%" stopColor="#1d3557" />
-          <stop offset="100%" stopColor="#0d1117" />
+        <radialGradient id="globeFill" cx="38%" cy="32%" r="70%">
+          <stop offset="0%" stopColor="#dce8ff" />
+          <stop offset="100%" stopColor="#a5b4fc" />
         </radialGradient>
         <clipPath id="globeClip">
           <circle cx="100" cy="100" r="72" />
@@ -34,24 +33,24 @@ function GlobeIcon() {
       <circle cx="100" cy="100" r="72" fill="url(#globeFill)" />
 
       {/* Latitude lines */}
-      <g clipPath="url(#globeClip)" stroke="#58a6ff" strokeWidth="0.8" strokeOpacity="0.35" fill="none">
+      <g clipPath="url(#globeClip)" stroke="#4f6ef7" strokeWidth="1" strokeOpacity="0.35" fill="none">
         <ellipse cx="100" cy="100" rx="72" ry="18" />
-        <ellipse cx="100" cy="100" rx="72" ry="40" />
+        <ellipse cx="100" cy="100" rx="72" ry="42" />
         <line x1="28" y1="100" x2="172" y2="100" />
         <line x1="100" y1="28" x2="100" y2="172" />
       </g>
 
       {/* Longitude lines */}
-      <g clipPath="url(#globeClip)" stroke="#a371f7" strokeWidth="0.8" strokeOpacity="0.3" fill="none">
+      <g clipPath="url(#globeClip)" stroke="#8a5cf6" strokeWidth="1" strokeOpacity="0.3" fill="none">
         <ellipse cx="100" cy="100" rx="36" ry="72" />
-        <ellipse cx="100" cy="100" rx="60" ry="72" />
+        <ellipse cx="100" cy="100" rx="62" ry="72" />
       </g>
 
-      {/* Globe border */}
-      <circle cx="100" cy="100" r="72" fill="none" stroke="#58a6ff" strokeWidth="1.5" strokeOpacity="0.5" />
+      {/* Border ring */}
+      <circle cx="100" cy="100" r="72" fill="none" stroke="#4f6ef7" strokeWidth="2" strokeOpacity="0.5" />
 
-      {/* Highlight */}
-      <ellipse cx="80" cy="72" rx="22" ry="14" fill="white" fillOpacity="0.05" />
+      {/* Specular highlight */}
+      <ellipse cx="78" cy="70" rx="20" ry="13" fill="white" fillOpacity="0.35" />
     </svg>
   );
 }
