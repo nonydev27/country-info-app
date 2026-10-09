@@ -1,0 +1,170 @@
+/* index.css - all the styling for the app. */
+
+/* A CSS reset-ish: makes padding/borders behave predictably everywhere. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background: #f0f4f8;
+  color: #1a202c;
+}
+
+/* The outer wrapper centers everything and limits the width. */
+.app {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.app-header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+.subtitle {
+  margin: 0;
+  color: #4a5568;
+}
+
+/* --- Search bar --- */
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* Highlight the input when focused (keyboard users). */
+.search-input:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+.search-button {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #3182ce;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-button:hover:not(:disabled) {
+  background: #2b6cb0;
+}
+
+/* Show a "disabled" look while a search is running. */
+.search-button:disabled,
+.search-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* --- State messages (loading / error / empty) --- */
+.state-message {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.loading {
+  color: #2b6cb0;
+}
+
+.error {
+  color: #822727;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+}
+
+.empty {
+  color: #4a5568;
+  background: #edf2f7;
+}
+
+/* --- Country card --- */
+.country-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.country-flag {
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  flex-shrink: 0;
+}
+
+.country-name {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.country-official {
+  margin: 0.15rem 0 0.75rem;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.country-info {
+  list-style: none; /* remove the default bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+.country-info li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.25rem 0;
+  border-bottom: 1px dashed #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.country-info li:last-child {
+  border-bottom: none;
+}
+
+.country-info .label {
+  font-weight: 600;
+  color: #4a5568;
+}
+
+/* On small screens, stack the flag above the details. */
+@media (max-width: 480px) {
+  .country-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
