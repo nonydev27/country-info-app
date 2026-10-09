@@ -8,7 +8,7 @@ import { fetchCountriesByName } from "./api.js";
 // "dumb": they just display what App gives them.
 
 function App() {
-  // --- State ----------------------------------------------------------------
+  // --- State ---------------
   // `countries` holds the array of results from the API.
   const [countries, setCountries] = useState([]);
 
@@ -22,7 +22,7 @@ function App() {
   // "the user has not searched yet" and "the user searched and got nothing".
   const [hasSearched, setHasSearched] = useState(false);
 
-  // --- Search handler -------------------------------------------------------
+  // --- Search handler --------------------------------------
   // This runs when the SearchBar tells us the user submitted a term.
   async function handleSearch(name) {
     // Reset the previous state so we do not show stale results or old errors.
@@ -43,7 +43,7 @@ function App() {
     }
   }
 
-  // --- Render ---------------------------------------------------------------
+  // --- Render -----------------------------
   return (
     <div className="app">
       <header className="app-header">
