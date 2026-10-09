@@ -74,8 +74,8 @@ function Spinner() {
       />
       <defs>
         <linearGradient id="spinnerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#58a6ff" />
-          <stop offset="100%" stopColor="#a371f7" />
+          <stop offset="0%" stopColor="#4f6ef7" />
+          <stop offset="100%" stopColor="#8a5cf6" />
         </linearGradient>
       </defs>
     </svg>
@@ -142,7 +142,7 @@ function App() {
         {/* INITIAL */}
         {!loading && !error && !hasSearched && (
           <p className="state-message empty">
-            ✦ Type a country name above to begin your journey.
+            Type a country name above to begin your journey.
           </p>
         )}
 
